@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrace</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        .home {
+            flex: 1;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-image: url('../KasikWeb/Image/FormBCG.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .home h2 {
+            font-size: 68px; 
+            margin-bottom: 30px; 
+            color: rgb(255, 255, 255);
+        }
+        label {
+            font-weight: bold;
+            color: white;
+        }
+
+        input {
+            padding: 5px;
+            margin: 2px 0;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Volcanoids</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Domů</a></li>
+                <li><a href="Galerie.html">Galerie</a></li>
+                <li><a href="Trailer.html">Trailer</a></li>
+                <li><a href="Obchod.html">Obchod</a></li>
+                <li><a href="Recenze.html">Recenze</a></li>
+                <li><a href="Forum.html" class="active">Diskuzní fórum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home">
+        <div class="content-box2">
+            <h2>Registrace</h2>
+            <form action="register.php" method="POST">
+                <label for="username">Jméno:</label>
+                <input type="text" name="username" id="username" placeholder="Uživatelské Jméno" required>
+                <br>
+                <br>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <br>
+                <br>
+                <label for="password">Heslo:</label>
+                <input type="password" name="password" id="password" placeholder="Heslo" required>
+                <br>
+                <br>
+                <div class="button-container">            
+                    <button type="button" class="second-btn" onclick="window.location.href='Forum.html';">Zpět</button>
+                    <button type="submit" class="second-btn">Registrovat</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jan Kašík</p>
+    </footer>
+</body>
+</html>
